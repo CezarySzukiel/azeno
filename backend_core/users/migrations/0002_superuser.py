@@ -6,7 +6,7 @@ from django.db import migrations
 
 
 def create_superuser(apps, schema_editor):
-    User = apps.get_model('users', 'CustomUser') # apps pobiera historyczną wersję modelu.
+    User = apps.get_model('users', 'CustomUser')  # apps pobiera historyczną wersję modelu.
     # User = get_user_model() to pobiera aktualną wersję modelu użytkownika, jeśli się zmieni to wywali aplikację.
 
     DJ_SU_USERNAME = os.environ.get('DJ_SU_USERNAME')
@@ -30,7 +30,6 @@ def delete_superuser(apps, schema_editor):
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('users', '0001_initial'),
     ]

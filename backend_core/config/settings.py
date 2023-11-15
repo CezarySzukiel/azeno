@@ -32,9 +32,9 @@ SECRET_KEY = os.environ.get('DJ_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get('DJ_DEBUG', False))
-print("-"*50)
+print("-" * 50)
 print(f"DEBUG: {DEBUG}")
-print("-"*50)
+print("-" * 50)
 
 ALLOWED_HOSTS = os.environ.get('DJ_ALLOWED_HOSTS', '').split()
 
@@ -74,7 +74,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug', # niebezpieczne na produkcji
+                'django.template.context_processors.debug',  # niebezpieczne na produkcji
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
